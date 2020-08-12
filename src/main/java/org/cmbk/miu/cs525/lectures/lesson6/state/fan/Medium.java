@@ -1,4 +1,4 @@
-package org.cmbk.miu.cs525.lectures.lesson6.state;
+package org.cmbk.miu.cs525.lectures.lesson6.state.fan;
 
 public class Medium extends FanState{
     public Medium(CeilingFan ceilingFan) {

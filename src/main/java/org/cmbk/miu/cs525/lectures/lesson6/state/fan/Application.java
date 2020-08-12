@@ -1,6 +1,4 @@
-package org.cmbk.miu.cs525.lectures.lesson6;
-
-import org.cmbk.miu.cs525.lectures.lesson6.state.*;
+package org.cmbk.miu.cs525.lectures.lesson6.state.fan;
 
 public class Application {
     public static void main(String[] args) {

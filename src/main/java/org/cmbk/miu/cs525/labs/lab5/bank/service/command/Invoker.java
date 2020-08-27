@@ -5,9 +5,9 @@ import java.util.LinkedList;
 import java.util.Map;
 
 public class Invoker {
-    private Map<String, Command> toDoCommands = new LinkedHashMap<>();
-    private LinkedList<Command> commandList = new LinkedList<>();
-    private LinkedList<Command> undoList = new LinkedList<>();
+    private final Map<String, Command> toDoCommands = new LinkedHashMap<>();
+    private final LinkedList<Command> commandList = new LinkedList<>();
+    private final LinkedList<Command> undoList = new LinkedList<>();
 
     public void addCommand(String cmdName, Command command) {
         toDoCommands.put(cmdName, command);

@@ -5,8 +5,8 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class PushCommand implements Command {
 
-    private Stack stack;
-    private int i;
+    private final Stack stack;
+    private final int i;
 
     @Override
     public void execute() {

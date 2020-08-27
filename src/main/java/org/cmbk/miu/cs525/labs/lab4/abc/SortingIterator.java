@@ -6,13 +6,11 @@ import java.util.Iterator;
 import java.util.List;
 
 public class SortingIterator<T> implements Iterator<T> {
-    private List<T> elements;
-    private Comparator<T> comparator;
+    private final List<T> elements;
     private int position;
 
     public SortingIterator(List<T> elements, Comparator<T> comparator) {
         this.elements = elements;
-        this.comparator = comparator;
         Collections.sort(elements, comparator);
     }
 

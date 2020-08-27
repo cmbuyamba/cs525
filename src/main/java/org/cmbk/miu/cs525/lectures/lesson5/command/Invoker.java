@@ -3,9 +3,9 @@ package org.cmbk.miu.cs525.lectures.lesson5.command;
 import java.util.*;
 
 public class Invoker {
-    private Map<String, Command> toDoCommands = new LinkedHashMap<>();
-    private LinkedList<Command> commandList = new LinkedList<>();
-    private LinkedList<Command> undoList = new LinkedList<>();
+    private final Map<String, Command> toDoCommands = new LinkedHashMap<>();
+    private final LinkedList<Command> commandList = new LinkedList<>();
+    private final LinkedList<Command> undoList = new LinkedList<>();
 
     public void addCommand(String cmdName, Command command) {
         toDoCommands.put(cmdName, command);

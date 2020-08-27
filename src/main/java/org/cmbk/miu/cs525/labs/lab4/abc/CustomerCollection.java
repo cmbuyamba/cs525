@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public class CustomerCollection {
-    private List<Customer> customers = new ArrayList<>();
+    private final List<Customer> customers = new ArrayList<>();
 
     public void addCustomer(Customer customer) {
         customers.add(customer);

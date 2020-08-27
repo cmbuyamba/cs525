@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ReverseIterator<E> implements Iterator<E> {
-    private List<E> list;
+    private final List<E> list;
     private int position;
 
     public ReverseIterator(List<E> list) {

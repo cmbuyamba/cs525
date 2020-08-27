@@ -6,10 +6,10 @@ import java.util.function.Predicate;
 
 public class FilterIterator<T> implements Iterator<T> {
 
-    private List<T> list;
+    private final List<T> list;
     private int position;
-    private Predicate<T> predicate;
-    private boolean skip;
+    private final Predicate<T> predicate;
+    private final boolean skip;
 
     public FilterIterator(List<T> list, Predicate<T> predicate, boolean skip) {
         this.list = list;

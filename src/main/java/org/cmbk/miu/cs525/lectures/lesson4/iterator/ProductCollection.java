@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ProductCollection {
-    private List<Product> products = new ArrayList<>();
+    private final List<Product> products = new ArrayList<>();
     public void addProduct(Product product){
         products.add(product);
     }

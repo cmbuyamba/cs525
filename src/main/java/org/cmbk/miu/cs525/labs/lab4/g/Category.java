@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.HashSet;
 
 public class Category extends ProductCatalogComponent {
-    private Collection<ProductCatalogComponent> productCatalogComponent = new HashSet<>();
+    private final Collection<ProductCatalogComponent> productCatalogComponent = new HashSet<>();
 
     public Category(String name) {
         super(name);

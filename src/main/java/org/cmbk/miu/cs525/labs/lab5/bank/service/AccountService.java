@@ -9,7 +9,7 @@ import java.util.Collection;
 
 
 public class AccountService implements IAccountService {
-    private IAccountDAO accountDAO;
+    private final IAccountDAO accountDAO;
 
     public AccountService() {
         accountDAO = new AccountDAO();

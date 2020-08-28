@@ -1,12 +1,14 @@
-package org.cmbk.miu.cs525.lectures.lesson8.proxy;
+package org.cmbk.miu.cs525.labs.lab8.bank.proxy;
+
+import org.cmbk.miu.cs525.lectures.lesson8.proxy.StopWatch;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
-public class StopWatchDynamicProxy implements InvocationHandler {
+public class StopWatchProxy implements InvocationHandler {
     private Object target;
 
-    public StopWatchDynamicProxy(Object target) {
+    public StopWatchProxy(Object target) {
         this.target = target;
     }
 
@@ -14,7 +16,6 @@ public class StopWatchDynamicProxy implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         StopWatch stopwatch = new StopWatch();
         stopwatch.start();
-        // invoke the method on the target
         Object returnValue = method.invoke(target, args);
         stopwatch.stop();
         System.out.println("The method " + method.getName() + " took " + stopwatch.getMillis() + " ms");

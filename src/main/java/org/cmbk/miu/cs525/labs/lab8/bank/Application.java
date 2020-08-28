@@ -19,21 +19,20 @@ public class Application {
                 new Class[]{IAccountService.class},
                 new StopWatchProxy(new AccountService()));
         // create 2 accounts;
-        stopWatchProxy.createAccount(1263862, "Frank Brown");
-        stopWatchProxy.createAccount(4253892, "John Doe");
+        stopWatchProxy.createAccount(3263862, "Frank Brown");
+        stopWatchProxy.createAccount(6253892, "John Doe");
         //use account 1;
-        stopWatchProxy.deposit(1263862, 240);
-        stopWatchProxy.deposit(1263862, 529);
-        stopWatchProxy.withdraw(1263862, 230);
+        stopWatchProxy.deposit(3263862, 240);
+        stopWatchProxy.deposit(3263862, 529);
+        stopWatchProxy.withdraw(3263862, 230);
         //use account 2;
-        stopWatchProxy.deposit(4253892, 12450);
-        stopWatchProxy.transferFunds(4253892, 1263862, 100, "payment of invoice 10232");
+        stopWatchProxy.deposit(6253892, 12450);
+        stopWatchProxy.transferFunds(6253892, 3263862, 100, "payment of invoice 10232");
         // show balances
 
-        Collection<Account> accountlist = stopWatchProxy.getAllAccounts();
-        Customer customer = null;
-        for (Account account : accountlist) {
-            customer = account.getCustomer();
+        Collection<Account> accountList = stopWatchProxy.getAllAccounts();
+        for (Account account : accountList) {
+            Customer customer = account.getCustomer();
             System.out.println("Statement for Account: " + account.getAccountNumber());
             System.out.println("Account Holder: " + customer.getName());
             System.out.println("-Date-------------------------"

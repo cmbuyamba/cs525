@@ -7,7 +7,7 @@ import java.util.Collection;
 public interface IAccountService {
     Account createAccount(long accountNumber, String customerName);
 
-    Account getAccount(long accountNumber);
+    AccountDTO getAccount(long accountNumber);
 
     Collection<Account> getAllAccounts();
 

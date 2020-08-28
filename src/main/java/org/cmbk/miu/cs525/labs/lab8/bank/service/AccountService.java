@@ -33,9 +33,9 @@ public class AccountService implements IAccountService {
         loggingProxy.updateAccount(account);
     }
 
-    public Account getAccount(long accountNumber) {
+    public AccountDTO getAccount(long accountNumber) {
         Account account = loggingProxy.loadAccount(accountNumber);
-        return account;
+        return new AccountAdapter().getAccountDTO(account);
     }
 
     public Collection<Account> getAllAccounts() {
